@@ -9,10 +9,10 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class MyCircle {
+public class MyCircle { //Atributes
     private MyPoint center;
     private int radius;
-    
+    //Constructors
     public MyCircle(){
         MyPoint centro=new MyPoint(0,0);
         this.center=centro;
@@ -26,6 +26,7 @@ public class MyCircle {
         this.center=center;
         this.radius=radius;
     }
+    //Getters and Setters
     public int getRadius(){
         return this.radius;
     }
@@ -50,7 +51,7 @@ public class MyCircle {
     public void setCenteryY(int y){
         this.center.setY(y);
     }
-    public int[] getCenterXY(){
+    public int[] getCenterXY(){ //getter for the center coordinate in array form 
         int[] arregloCirc= new int[2];
         arregloCirc[0]=this.center.getX();
         arregloCirc[1]=this.center.getY();
@@ -64,18 +65,18 @@ public class MyCircle {
     public String toString(){
         return "MyCircle[radius: "+this.radius+", center: "+center.toString();
     }
-    public double getArea(){
+    public double getArea(){ //method for the area calculus
         double aC;
         aC=Math.pow(this.radius,2)*Math.PI;
         return aC;
     }
-    public double getCircumference(){
+    public double getCircumference(){ //method for the perimeter calculus
         double circum;
         circum=Math.PI*(this.radius*2);
         return circum;
     }
-    public double distance(MyCircle another){
-        double dist;
+    public double distance(MyCircle another){ //we calculate the distance between 
+        double dist;                //this circle and another instance of circle
         dist=Math.sqrt(Math.pow(another.center.getX()-this.center.getX(),2)
                 +Math.pow(another.center.getY()-this.center.getY(),2));
         return dist;
