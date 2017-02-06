@@ -9,12 +9,13 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class Book {
+public class Book { //Atributes
     private String name;
     private Author[] authors;
     private double price;
     private int qty;
     
+    //Constructors
     public Book(String name, Author[] authors, double price){
         this.name=name;
         this.authors=authors;
@@ -27,6 +28,7 @@ public class Book {
         this.price=price;
         this.qty=qty;
     }
+    //Getters and Setters
     public String getName(){
         return this.name;
     }
@@ -50,8 +52,8 @@ public class Book {
         return "Book[name: "+this.name+", authors= "+getAuthorNames(this.authors)+", price: "+
                 this.price+", quantity: "+this.qty;
     }
-    public String getAuthorNames(Author[] authors){
-        String names="";
+    public String getAuthorNames(Author[] authors){ //method for the usage of an array
+        String names="";                    //saving the author objects
         for (int i=0;i==2;i++){
             names+=authors[i].toString()+",";
         }
