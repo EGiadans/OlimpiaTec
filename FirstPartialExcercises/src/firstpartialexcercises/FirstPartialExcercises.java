@@ -45,9 +45,11 @@ public class FirstPartialExcercises {
         System.out.println(libro1.getAuthorNames(autores));
         System.out.println(libro1.toString());
         */
-        //Prueba de MyRectangle
-        MyRectangle rectangulo =new MyRectangle(1,1,2,2);
-        System.out.println(rectangulo.toString());
+       
+        System.out.println("Test MyRectangle");
+        MyRectangle rectangulo =new MyRectangle(1,1,2,2); //Example values for each corner of the rectangle
+        System.out.println(rectangulo.toString()); //Execute the showing of each parameter
+                                                //including area and perimeter
     }
     
 }
