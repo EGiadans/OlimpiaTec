@@ -15,7 +15,7 @@ public class FirstPartialExcercises {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       /* // TODO code application logic here
         Employee Rob=new Employee(1,"Rob","Rivera",30000);
         //Rob.raiseSalary(15);
         System.out.println(Rob.raiseSalary(15));
@@ -31,6 +31,23 @@ public class FirstPartialExcercises {
         Time hora =new Time(10,50,58);
         System.out.println("Hora actual: "+hora.toString());
         System.out.println(hora.nextSecond());
+        System.out.println(hora.previousSecond());
+        
+        //Prueba de Book
+        
+        Author juan= new Author("juan","mail",'m');
+        Author pedro= new Author("pedro","mail",'m');
+        Author[] autores = new Author[2];
+        autores[0]=juan;
+        autores[1]=pedro;
+        
+        Book libro1=new Book("nombre",autores,20,1);
+        System.out.println(libro1.getAuthorNames(autores));
+        System.out.println(libro1.toString());
+        */
+        //Prueba de MyRectangle
+        MyRectangle rectangulo =new MyRectangle(1,1,2,2);
+        System.out.println(rectangulo.toString());
     }
     
 }
