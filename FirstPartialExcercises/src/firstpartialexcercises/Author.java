@@ -9,16 +9,17 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class Author {
+public class Author { //Atributes
     private String name;
     private String email;
     private char gender;
     
-    public Author(String name, String email, char gender){
+    public Author(String name, String email, char gender){ //Constructor
         this.name=name;
         this.email=email;
         this.gender=gender;
     }
+    //Getter and Setter
     public String getName(){
         return this.name;
     }
@@ -31,7 +32,7 @@ public class Author {
     public char getGender(){
         return this.gender;
     }
-    @Override
+    @Override 
     public String toString(){
         return "Author[name: "+this.name+", e-mail: "+this.email+", gender: "+
                 this.gender;
