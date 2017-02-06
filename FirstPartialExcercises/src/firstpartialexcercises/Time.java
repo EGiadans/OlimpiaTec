@@ -9,16 +9,17 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class Time {
+public class Time { //Atributes
     private int hour;
     private int minute;
     private int second; 
-    
+    //Constructor
     public Time(int hour, int minute, int second){
         this.hour=hour;
         this.minute=minute;
         this.second=second;
     }
+    //Getters and Setters
     public int getHour(){
         return this.hour;
     }
@@ -37,8 +38,8 @@ public class Time {
     public void setSecond(int second){
         this.second=second;
     }
-    public void setTime(int hour, int minute, int second){
-        this.hour=hour;
+    public void setTime(int hour, int minute, int second){ //Setter for the whole 
+        this.hour=hour;                             //Time object
         this.minute=minute;
         this.second=second;
     }
@@ -47,9 +48,9 @@ public class Time {
         return String.format("%02d",this.hour)+":"+String.format("%02d",this.minute)+
                 ":"+String.format("%02d",this.second);
     }
-    public Time nextSecond(){
-        Time x=new Time(this.hour,this.minute,this.second);
-        x.second+=1;
+    public Time nextSecond(){ //Condition, if the second is 59 and we increase it by 1
+        Time x=new Time(this.hour,this.minute,this.second); //the change will aply to the 
+        x.second+=1;                                        //rest of the Time value
         if (x.second==60){
             x.second=00;
             x.minute+=1;
@@ -63,8 +64,8 @@ public class Time {
         }
         return x;         
     }
-    public Time previousSecond(){
-        Time x=new Time(this.hour,this.minute,this.second);
+    public Time previousSecond(){ //Condition, opposite way, but the change will also
+        Time x=new Time(this.hour,this.minute,this.second);//apply, 
         x.second-=1;
         if (x.second==0){
             x.minute-=1;
