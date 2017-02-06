@@ -9,10 +9,10 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class Circle1 {
+public class Circle1 { //Atributes
     private double radius;
     private String color;
-    
+    //Constructors
     public Circle1(){
         radius=1.0;
         color="red";
@@ -32,6 +32,7 @@ public class Circle1 {
         this.radius=radius;
         this.color=color;
     }
+    //Getters and Setters
     public double getRadius(){
         return this.radius;
     }
@@ -54,7 +55,7 @@ public class Circle1 {
         */
         return "Circle [radius= "+this.radius +" ,color = "+this.color+"]";
     }
-    public double getArea(){
+    public double getArea(){ //method for the area procedure
         return this.radius*this.radius*Math.PI;
     }
     
