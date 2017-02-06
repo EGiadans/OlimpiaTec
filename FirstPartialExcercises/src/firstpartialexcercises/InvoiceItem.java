@@ -9,18 +9,19 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class InvoiceItem {
+public class InvoiceItem { //Atributes
     private String id;
     private String desc;
     private int qty;
     private double unitPrice;
-    
+    //Constructor
     public InvoiceItem(String id, String desc, int qty, double unitPrice){
         this.id=id;
         this.desc=desc;
         this.qty=qty;
         this.unitPrice=unitPrice;
     }
+    //Getters and Setters
     public String getId(){
         return this.id;
     }
@@ -36,7 +37,7 @@ public class InvoiceItem {
     public double getUnitPrice(){
         return this.unitPrice; 
     }
-    public double getTotal(){
+    public double getTotal(){ //total amount=multiply qty and unitPrice
         return this.unitPrice*this.qty;
     }
     @Override
