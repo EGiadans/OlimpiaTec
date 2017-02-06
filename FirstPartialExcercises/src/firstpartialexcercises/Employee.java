@@ -9,19 +9,20 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class Employee {
+public class Employee { //Atributes
     private int id;
     private String firstName;
     private String lastName;
     private int salary;
-    
+    //Constructor
     public Employee(int id, String firstName, String lastName, int salary){
         this.id=id;
         this.firstName=firstName;
         this.lastName=lastName;
         this.salary=salary;
-        
+    
     }
+    //Getters and Setters
     public int getId(){
         return this.id;
     }
@@ -40,10 +41,10 @@ public class Employee {
     public void setSalary(int salary){
         this.salary=salary;
     }
-    public int getAnnualSalary(){
+    public int getAnnualSalary(){ //Multiply salary for number of months
         return this.salary*12;
     }
-    public int raiseSalary(int percentage){
+    public int raiseSalary(int percentage){ //increase the salary  according to a percentage
         this.salary+=this.salary*percentage/100;
         return this.salary;
     }
