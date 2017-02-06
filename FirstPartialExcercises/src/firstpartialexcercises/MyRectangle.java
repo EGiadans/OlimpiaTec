@@ -9,10 +9,10 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class MyRectangle {
+public class MyRectangle { //Atributes
     private MyPoint topLeft;
     private MyPoint bottomRight;
-    
+    //Constructors
     public MyRectangle(int x1, int y1, int x2, int y2){
         this.topLeft=new MyPoint(x1,y1);
         this.bottomRight=new MyPoint (x2,y2);
@@ -21,6 +21,7 @@ public class MyRectangle {
         this.topLeft=topLeft;
         this.bottomRight=bottomRight;
     }
+    //Getters and Setters with diferent parameters
     public MyPoint getTopLeft(){
         return this.topLeft;
     }
@@ -44,11 +45,11 @@ public class MyRectangle {
         return "MyRectangle[topLeft: "+this.topLeft+", bottomRight: "+this.bottomRight
                 +" area: "+this.getArea()+" perimeter: "+this.getPerimeter();
     }
-    public double getArea(){
+    public double getArea(){ //Calculation of area, using distance between coordinates
         return (this.topLeft.getX()-this.bottomRight.getX())*
                 (this.topLeft.getY()-this.bottomRight.getY());
     }
-    public double getPerimeter(){
+    public double getPerimeter(){ //Calculation of perimeter, using distance between coordinates
         return ((this.topLeft.getX()-this.bottomRight.getX())+
                 (this.topLeft.getY()-this.bottomRight.getY()))*2;
     }
