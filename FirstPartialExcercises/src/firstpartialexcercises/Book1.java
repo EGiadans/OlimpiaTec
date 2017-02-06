@@ -9,12 +9,12 @@ package firstpartialexcercises;
  *
  * @author Eduardo
  */
-public class Book1 {
+public class Book1 { //Atributes
     private String name;
     private Author author;
     private double price;
     private int qty;
-    
+    //Constructors
     public Book1(String name,Author author,double price){
         this.name=name;
         this.author=author;
@@ -27,6 +27,7 @@ public class Book1 {
         this.price=price;
         this.qty=qty;
     }
+    //  Getters and Setters
     public String getName(){
         return this.name;
     }
