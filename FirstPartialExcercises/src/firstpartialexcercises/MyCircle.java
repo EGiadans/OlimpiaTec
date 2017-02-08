@@ -48,7 +48,7 @@ public class MyCircle { //Atributes
     public int getCenterY(){
         return this.center.getY();
     }
-    public void setCenteryY(int y){
+    public void setCenterY(int y){
         this.center.setY(y);
     }
     public int[] getCenterXY(){ //getter for the center coordinate in array form 
@@ -77,8 +77,9 @@ public class MyCircle { //Atributes
     }
     public double distance(MyCircle another){ //we calculate the distance between 
         double dist;                //this circle and another instance of circle
-        dist=Math.sqrt(Math.pow(another.center.getX()-this.center.getX(),2)
-                +Math.pow(another.center.getY()-this.center.getY(),2));
+        dist=another.center.distance(another.center);
+        //dist=Math.sqrt(Math.pow(another.center.getX()-this.center.getX(),2)
+        //        +Math.pow(another.center.getY()-this.center.getY(),2));
         return dist;
     }
            
