@@ -49,12 +49,12 @@ public class Book { //Atributes
     }
     @Override
     public String toString(){
-        return "Book[name: "+this.name+", authors= "+getAuthorNames(this.authors)+", price: "+
+        return "Book[name: "+this.name+", authors= "+this.getAuthorNames(authors)+", price: "+
                 this.price+", quantity: "+this.qty;
     }
     public String getAuthorNames(Author[] authors){ //method for the usage of an array
         String names="";                    //saving the author objects
-        for (int i=0;i==2;i++){
+        for (int i=0;i<authors.length;i++){
             names+=authors[i].toString()+",";
         }
         return names;
