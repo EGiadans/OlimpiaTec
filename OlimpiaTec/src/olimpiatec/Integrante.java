@@ -9,15 +9,15 @@ package olimpiatec;
  *
  * @author Eduardo
  */
-public class Integrante {
+public class Integrante { //Attributes
     private String nombre;
     private int numero;
-    
+    //Constructor
     public Integrante (String nombre, int numero){
         this.nombre=nombre;
         this.numero=numero;
     }
-
+    //Getters and Setters
     public String getNombre() {
         return nombre;
     }
@@ -34,7 +34,8 @@ public class Integrante {
         this.numero = numero;
     }
     @Override 
-    public String toString(){
+    public String toString(){ //String with the details of the member 
         return "Nombre: "+this.nombre+", numero: "+this.numero;
+        
     }
 }

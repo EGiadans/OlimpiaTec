@@ -10,17 +10,17 @@ import java.util.*;
  *
  * @author Eduardo
  */
-public class Equipo {
+public class Equipo {   //Attributes 
     private String deporte;
     private String nombreEq;
     private ArrayList <Integrante> integrantes ;
-
+    //Constructor
     public Equipo(String deporte, String nombreEq, ArrayList<Integrante> integrantes) {
         this.deporte = deporte;
         this.nombreEq = nombreEq;
         this.integrantes = integrantes;
     }
-
+    //Getters and Setters
     public String getDeporte() {
         return deporte;
     }
@@ -36,41 +36,41 @@ public class Equipo {
     public void setNombreEq(String nombreEq) {
         this.nombreEq = nombreEq;
     }
-    public boolean addIntegrante(String nombre, int numero){
-        if (findIntegrante(nombre)==false){
-            this.integrantes.add(new Integrante(nombre,numero));
-            return true;
+    public boolean addIntegrante(String nombre, int numero){   //This method allow us 
+        if (findIntegrante(nombre)==false){                 //to addd a mmeber to the 
+            this.integrantes.add(new Integrante(nombre,numero)); //array list of members
+            return true;                                    // in a team
         }else{
             return false;
         }
     }
-    public boolean addIntegrante(Integrante integrante){
-        if (findIntegrante(integrante.getNombre())==false){
+    public boolean addIntegrante(Integrante integrante){ //Same method with diferent
+        if (findIntegrante(integrante.getNombre())==false){ //parameters
             this.integrantes.add(integrante);
             return true;
         }else{
             return false;
         }
     }
-    public boolean removeIntegrante(Integrante integrante){
-        if (findIntegrante(integrante.getNombre())==true){
-            this.integrantes.remove(integrante);
+    public boolean removeIntegrante(Integrante integrante){ //Is used for the removal
+        if (findIntegrante(integrante.getNombre())==true){ //of the whole member given
+            this.integrantes.remove(integrante);            //from the arrayList
             return true;
         }else{
             return false;
         }
     }
-    public boolean removeIntegrante(String nombre, int numero){
-        if (findIntegrante(nombre)==true){
+    public boolean removeIntegrante(String nombre, int numero){ //Same method,
+        if (findIntegrante(nombre)==true){                      //different parameters
             this.integrantes.remove(new Integrante(nombre,numero));
             return true;
         }else{
             return false;
         }
     }
-    private boolean findIntegrante(String nombre){
-        if (!this.integrantes.isEmpty()){
-            for (Integrante integrante: integrantes){
+    private boolean findIntegrante(String nombre){ //Method for making easier the
+        if (!this.integrantes.isEmpty()){       //process of adding and removing
+            for (Integrante integrante: integrantes){   //members of a team
                 if (integrante.getNombre().equals(nombre)){
                     return true;
                 }
@@ -79,8 +79,8 @@ public class Equipo {
         return false;
     }
     @Override 
-    public String toString(){
-        String temp;
+    public String toString(){ //Method for obtaining a String with the details
+        String temp;        //of a team including details of its members
         temp= "Equipo: "+this.nombreEq+"\n Deporte: "+this.deporte;
         
         for (Integrante integrante: integrantes){

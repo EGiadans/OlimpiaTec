@@ -9,19 +9,19 @@ package olimpiatec;
  *
  * @author Eduardo
  */
-public class Partido {
+public class Partido { //Atributes
     private int numeroP;
     private String horario;
     private Equipo equipo1;
     private Equipo equipo2;
-
+    //Constructor 
     public Partido(int numeroP, String horario, Equipo equipo1, Equipo equipo2) {
         this.numeroP = numeroP;
         this.horario = horario;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
     }
-
+    //Getters and Setters
     public int getNumeroP() {
         return numeroP;
     }
@@ -54,8 +54,9 @@ public class Partido {
         this.equipo2 = equipo2;
     }
     
-    @Override
-    public String toString(){
+    @Override 
+    public String toString(){   //Method for giving a String with the whole details of
+                                //a Game
         return "Partido \n"+getNumeroP()+"["+this.equipo1.getNombreEq()+" vs "+
                 this.equipo2.getNombreEq()+"]"+ "\n Horario: "+getHorario();
                 
